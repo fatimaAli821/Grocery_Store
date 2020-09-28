@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="3dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="5dp"
+    app:contentPadding="5dp"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/ShopIv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            app:c_border="true"
+            app:c_border_color="@color/colorGrey02"
+            app:c_border_width="1dp"
+            android:src="@drawable/ic_add_shopping_cart">
+        </com.blogspot.atifsoftwares.circularimageview.CircularImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/ShopIv"
+            android:layout_toStartOf="@id/nextIv">
+
+
+            <TextView
+                android:id="@+id/ShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Shop Name"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/Phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="phone"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack">
+            </TextView>
+            <TextView
+                android:id="@+id/adress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack">
+            </TextView>
+            <RatingBar
+                android:id="@+id/ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:numStars="5"
+                android:layout_gravity="end"
+                android:rating="3.5"
+                >
+
+            </RatingBar>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/closed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Closed"
+            android:padding="5dp"
+            android:background="@drawable/shape_rect06"
+            android:textColor="@color/RedColor"
+            android:layout_toStartOf="@id/nextIv"
+            android:textSize="10sp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/nextIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_navigate_next_grey"
+            android:layout_marginEnd="5dp"
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true">
+
+        </ImageView>
+        <!---onlion/offlion status-->
+        <ImageView
+            android:id="@+id/onlionIv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/circule_shape03">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

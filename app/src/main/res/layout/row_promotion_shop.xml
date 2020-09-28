@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="1dp"
+    app:cardElevation="3dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:padding="5dp"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/prom"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/prom">
+
+        </ImageView>
+        <TextView
+        android:id="@+id/promo_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/prom"
+        android:text="Promotion Code"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp">
+
+    </TextView>
+
+        <TextView
+            android:id="@+id/promo_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/prom"
+            android:layout_below="@id/promo_code"
+            android:text="Promotion Price: $"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/promo_price_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/promo_Price"
+            android:layout_below="@id/promo_code"
+            android:text="1.4"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/minimum_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/prom"
+            android:layout_below="@id/promo_Price"
+            android:text="Minimum Order Price: $"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/minimum_Order_price_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/minimum_Price"
+            android:layout_below="@id/promo_Price"
+            android:text="500"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/expireDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/prom"
+            android:layout_below="@id/minimum_Price"
+            android:text="23/08/2020"
+            android:textColor="@color/colorBlack">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/description_promo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/prom"
+            android:layout_below="@id/expireDateTv"
+            android:text="Description of the promotion code , max 2 lines. "
+            android:textColor="@color/colorBlack">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_navigate_next_grey"
+            android:tint="@color/colorPrimary"
+            android:background="@null">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

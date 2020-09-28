@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="7dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    app:contentPadding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/product_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_add_shopping_cart">
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/nextIv"
+            android:layout_toEndOf="@id/product_icon">
+
+            <TextView
+                android:id="@+id/disscount_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/shape_rect_05"
+                android:text="10% OFF"
+                android:textSize="10sp"
+                android:padding="5dp"
+                android:textColor="@color/Greencolor">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Title"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="the Product Description"
+                android:minLines="2"
+                android:maxLines="2"
+                android:layout_below="@id/tile"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/Add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Add to cart"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_add_shopping_cart"
+                android:layout_below="@id/description"
+                android:textColor="@color/colorPrimaryDark">
+
+            </TextView>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/Add_to_cart"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/discount_priceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$10"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/colorGrey02">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/Orignal_price"
+                    android:layout_toEndOf="@id/discount_priceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$20"
+                    android:textColor="@color/colorGrey02">
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/nextIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_navigate_next_grey"
+            android:layout_marginEnd="5dp"
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true">
+
+        </ImageView>
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

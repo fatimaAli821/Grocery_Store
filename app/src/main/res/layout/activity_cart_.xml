@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cart_Activity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_white"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:textStyle="bold"
+            android:text="Order To"/>
+
+        <!---Shop Name-->
+        <TextView
+            android:id="@+id/ss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_white"
+            android:textStyle="bold"
+            android:text="Shop Name"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/Greycolor00"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cartitemsRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                tools:listitem="@layout/row_cartitem"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/price_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/PrommoRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rect08"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/PromotionLabelTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Promotion Code"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textColor="@color/colorPrimary">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/CodeEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/PromotionLabelTv"
+
+                    android:layout_marginEnd="2dp"
+                    android:hint="Promo Code"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey02"
+                    android:padding="5dp"
+                    android:layout_toStartOf="@+id/ValidateBtnpromo">
+
+                </EditText>
+                    
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                      android:id="@+id/ValidateBtnpromo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/PromotionLabelTv"
+                        android:src="@drawable/ic_baseline_send_white"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/color_white"
+                        android:backgroundTint="@color/colorPrimary"
+                        app:fabSize="mini"
+                        >
+                    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+               <TextView
+                   android:id="@+id/PromoDescriptionTv"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/CodeEt"
+                   android:text="Promo Code Description"
+                   android:textColor="@color/colorBlack"
+                   android:textColorHint="@color/colorGrey01"
+                   android:padding="10dp"
+                   android:textSize="14sp">
+
+               </TextView>
+
+                <Button
+                    android:id="@+id/applyButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_below="@id/PromoDescriptionTv"
+                    android:textColor="@color/color_white"
+                    android:text="Apply">
+
+                </Button>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/PrommoRl"
+                >
+                <TextView
+
+                    android:id="@+id/sTotalLabelTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Sub Total:"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_white">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sTotalTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:text="$ 10"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_white">
+
+                </TextView>
+
+                <TextView
+
+                    android:id="@+id/disscountTotalLabelTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_below="@+id/sTotalLabelTv"
+                    android:text="Discount:"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_white">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/sdisscountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_below="@+id/sTotalTv"
+                    android:layout_alignParentEnd="true"
+                    android:text="$ 15"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_white">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/dFeeLabelTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Delivery Fee:"
+                    android:layout_below="@id/disscountTotalLabelTv"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_white">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/dFeeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/sdisscountTv"
+                    android:text="$ 12"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_white">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/TotalLabelTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Total Price:"
+                    android:layout_below="@id/dFeeLabelTv"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_white">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/TotalTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/dFeeTv"
+                    android:text="$ 22"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_white">
+
+                </TextView>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/Checkoutbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:padding="15dp"
+        android:background="@drawable/shape_rect_07"
+        android:text="Confirm Order"
+
+        android:textColor="@color/color_white"/>
+</RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

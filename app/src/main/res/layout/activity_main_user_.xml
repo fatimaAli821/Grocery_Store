@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainUser_Activity">
+    <RelativeLayout
+        android:id="@+id/RlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_rec101"
+        android:padding="10dp">
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/profileIv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_person_grey">
+
+        </com.blogspot.atifsoftwares.circularimageview.CircularImageView>
+        <TextView
+            android:id="@+id/nameIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profileIv"
+            android:textSize="15sp"
+            android:layout_marginLeft="7dp"
+            android:text="Name"
+            android:textColor="@color/color_white">
+        </TextView>
+        <TextView
+            android:id="@+id/emailIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profileIv"
+            android:textSize="15sp"
+            android:layout_below="@id/nameIv"
+            android:layout_marginLeft="7dp"
+            android:text="Email"
+            android:textColor="@color/color_white">
+        </TextView>
+        <TextView
+            android:id="@+id/phoneIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profileIv"
+            android:textSize="15sp"
+            android:layout_below="@id/emailIv"
+            android:layout_marginLeft="7dp"
+            android:text="Phone"
+            android:textColor="@color/color_white">
+        </TextView>
+
+
+
+        <ImageButton
+            android:id="@+id/Btnlogout"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_logout_white"
+            android:background="@null"
+            android:layout_alignParentRight="true">
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/edit_profile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_mode_edit_profile"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30sp"
+            android:background="@null"
+            android:layout_alignParentRight="true">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/Setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toStartOf="@id/edit_profile"
+            android:background="@null"
+            android:src="@drawable/ic_settings_white">
+
+        </ImageButton>
+
+
+        <!---tabs: products,order-->
+        <LinearLayout
+            android:layout_below="@id/profileIv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rect_03"
+            android:layout_marginTop="5dp"
+            >
+            <TextView
+                android:id="@+id/tabshop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Shops"
+                android:background="@drawable/shape_rect04"
+                android:gravity="center"
+                android:textColor="@color/colorBlack">
+
+            </TextView>
+            <TextView
+                android:id="@+id/tabOrders"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Orders"
+                android:gravity="center"
+                android:textColor="@color/color_white">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!---product toolbar-->
+    <RelativeLayout
+        android:id="@+id/ShopsRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/RlToolbar">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shopRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_margin="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_shop"
+            android:layout_marginBottom="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+    <!---orders toolbar-->
+
+    <RelativeLayout
+        android:id="@+id/ordersRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/RlToolbar">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/OrderRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_margin="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_order_user"
+            android:layout_marginBottom="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>
+

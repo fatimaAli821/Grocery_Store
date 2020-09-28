@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="3dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="5dp"
+    app:contentPadding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/orderTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="order : 12345"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22/06/2020"
+            android:textStyle="bold"
+           android:layout_toStartOf="@+id/next_Iv"
+            android:textColor="@color/colorBlack"/>
+        <TextView
+            android:id="@+id/Shop_nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ABC Shop"
+            android:textStyle="bold"
+            android:layout_below="@id/dateTv"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/amountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount : $32.44 "
+            android:layout_below="@id/Shop_nameTv"
+          />
+        <!---InProgress/Complete/Deliver-->
+        <TextView
+            android:id="@+id/orderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/next_Iv"
+            android:layout_below="@id/Shop_nameTv"
+            android:layout_marginTop="5dp"
+            android:text="In Progress"
+            android:textColor="@color/Greencolor">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/next_Iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_navigate_next_grey"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

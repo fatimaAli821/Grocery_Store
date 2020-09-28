@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="1dp"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/itemTittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="@color/colorBlack">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/itemprice"
+            android:layout_below="@id/itemTittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10"
+
+            android:textColor="@color/colorBlack">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/itemTittle">
+
+            <TextView
+                android:id="@+id/itemPriceEachTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10/Kg"
+                android:gravity="center"
+                android:textColor="@color/colorBlack">
+            </TextView>
+
+            <TextView
+                android:id="@+id/itemquantityTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[2]"
+                android:gravity="center"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/colorBlack">
+            </TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
